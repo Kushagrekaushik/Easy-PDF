@@ -110,20 +110,22 @@ ddocker build -t convoapp-frontend .
 docker run -p 5173:5173 convoapp-frontend
 ```
 ## Directory Structure
-ConvoApp/
-├── backend/
-│   ├── index.js            # Main server file for handling requests
-│   ├── uploads/            # Directory for uploaded DOCX files
-│   ├── files/              # Directory for generated PDF files
-│   ├── Dockerfile          # Docker configuration to containerize the app
-│   ├── package.json        # Dependencies and scripts for Node.js
-│   └── README.md           # Documentation for the backend
-├── frontend/
-│   ├── src/                # Source code for React frontend
-│   ├── public/             # Public files for the frontend
-│   ├── Dockerfile          # Docker configuration for the frontend
-│   ├── package.json        # Dependencies and scripts for frontend (React)
-│   └── README.md           # Documentation for the frontend
+- **backend/**: This folder contains all the files related to the backend, including the server setup, routes, and configuration files.
+  - `index.js`: The entry point for the backend server.
+  - `uploads/`: Directory to store the uploaded `.docx` files.
+  - `files/`: Directory where the generated PDF files are stored.
+  - `Dockerfile`: Defines the Docker image for the backend app.
+  - `package.json`: Contains backend dependencies and scripts.
+
+- **frontend/**: Contains the React.js frontend files.
+  - `src/`: The main code for the React app.
+  - `public/`: Static files like `index.html`.
+  - `Dockerfile`: Defines the Docker image for the frontend app.
+  - `package.json`: Contains frontend dependencies and scripts.
+
+- **docker-compose.yml**: This file allows you to run both the backend and frontend in Docker containers using Docker Compose.
+
+- **.gitignore**: Specifies files and directories to be ignored by Git (e.g., `node_modules`, `.env` files, etc.).
 
 
 
